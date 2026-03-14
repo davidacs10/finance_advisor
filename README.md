@@ -16,20 +16,7 @@ Un asistente inteligente de finanzas personales desarrollado en **Python** que a
 - **Frontend:** [Streamlit](https://streamlit.io/)
 - **Procesamiento de Datos:** [Pandas](https://pandas.pydata.org/)
 - **Gráficos:** [Plotly](https://plotly.com/python/)
-- **IA:** OpenAI API / LangChain
-
-## 📂 Estructura del Proyecto
-
-```text
-.
-├── src/
-│   ├── app.py              # Interfaz de usuario (Streamlit)
-│   ├── logic/              # Procesamiento de datos (Pandas)
-│   └── ai/                 # Lógica de prompts e IA
-├── data/                   # Archivos de ejemplo
-├── .env                    # Variables de entorno (API Keys)
-└── requirements.txt        # Dependencias del proyecto
-```
+- **IA:** Gemini API
 
 ## 📊 Formato del Excel Sugerido
 
