@@ -31,49 +31,6 @@ Un asistente inteligente de finanzas personales desarrollado en **Python** que a
 └── requirements.txt        # Dependencias del proyecto
 ```
 
-## ⚙️ Instalación y Configuración
-
-1. **Clonar el repositorio:**
-
-```bash
-git clone [https://github.com/tu-usuario/mi-proyecto-finanzas.git](https://github.com/tu-usuario/mi-proyecto-finanzas.git)
-cd mi-proyecto-finanzas
-
-```
-
-2. **Crear y activar entorno virtual:**
-
-```bash
-python -m venv venv
-# En Windows:
-.\venv\Scripts\activate
-# En Mac/Linux:
-source venv/bin/activate
-
-```
-
-3. **Instalar dependencias:**
-
-```bash
-pip install -r requirements.txt
-
-```
-
-4. **Configurar API Key:**
-   Crea un archivo `.env` en la raíz y añade tu llave:
-
-```env
-OPENAI_API_KEY=tu_api_key_aqui
-
-```
-
-5. **Ejecutar la aplicación:**
-
-```bash
-streamlit run src/app.py
-
-```
-
 ## 📊 Formato del Excel Sugerido
 
 Para que la app funcione correctamente, el archivo Excel debe contener las siguientes columnas:
