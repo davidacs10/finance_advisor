@@ -12,6 +12,46 @@ st.set_page_config(page_title="AI Finance Advisor", page_icon="💰", layout="wi
 st.title("💰 AI Finance Advisor")
 st.caption("Sube tu reporte de gastos en Excel y obtén análisis personalizados.")
 
+# ── Ejemplo de formato esperado ──────────────────────────
+with st.expander("📋 ¿Cómo debe estructurarse el archivo Excel?"):
+    st.markdown("Tu archivo `.xlsx` debe tener **exactamente estas 4 columnas:**")
+
+    import pandas as pd
+
+    df_ejemplo = pd.DataFrame(
+        {
+            "Fecha": [
+                "05/01/2024",
+                "12/01/2024",
+                "18/01/2024",
+                "03/02/2024",
+                "15/02/2024",
+            ],
+            "Concepto": ["Supermercado", "Netflix", "Gasolina", "Restaurante", "Gym"],
+            "Monto": [1200.00, 250.00, 800.00, 450.00, 350.00],
+            "Categoria": ["Comida", "Ocio", "Transporte", "Comida", "Salud"],
+        }
+    )
+    st.dataframe(df_ejemplo, use_container_width=True, hide_index=True)
+
+    st.markdown("**Reglas importantes:**")
+    st.markdown(
+        """
+- `Fecha` → formato DD/MM/AAAA
+- `Concepto` → descripción libre del gasto
+- `Monto` → número sin símbolos (no escribas `$1,200` sino `1200`)
+- `Categoria` → texto libre, pero sé consistente (siempre `Comida`, no a veces `comida` o `COMIDA`)
+    """
+    )
+
+    with open("data/gastos_ejemplo.xlsx", "rb") as f:
+        st.download_button(
+            label="⬇️ Descargar archivo de ejemplo",
+            data=f,
+            file_name="gastos_ejemplo.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        )
+
 # ── Upload ───────────────────────────────────────────────
 archivo = st.file_uploader("Sube tu archivo de gastos", type=["xlsx"])
 
